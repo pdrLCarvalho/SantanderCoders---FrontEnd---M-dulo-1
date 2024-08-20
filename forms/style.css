@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: rgb(250,0,0);
+    height: 50px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+img{
+    margin-left: 20px;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+.tela{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forms{
+    width: 600px;
+    background-color: rgb(255,255,255);
+    padding-top: 10px;
+    padding-left: 20px;
+    border-radius: 10px;
+    border: 2px solid red;
+    margin-bottom: 30px;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form p{
+    display: flex;
+    width: 100%;
+    flex-direction: column ;
+    align-items: center;
+}
+
+p{
+    margin-top: 20px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.label{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.input{
+    width: 60%;
+    margin-right: 20px;
+    padding: 12px;
+}
+
+fieldset{
+    padding: 12px;
+    margin: 15px;
+    width: 80%;
+    border-color: red;
+    border-radius: 10px;
+}
+
+legend{
+    padding: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.btn button{
+    padding: 10px 25px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+
+    background-color: red;
+    color: #fff;
+}
+
+.btn button:hover{
+    background-color: rgb(150, 0, 0);
+}
+
+

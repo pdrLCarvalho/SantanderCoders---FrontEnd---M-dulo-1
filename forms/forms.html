@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faça seu Cartão</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <img src="../assets/images/santander-logo.png">
+        </header>
+
+        <div class="tela">
+            <div class="forms">
+                <h1>Cadastro Pessoa Física</h1>
+                <form>
+                        <p>
+                            <label for="nome" class="label">Nome</label>
+                            <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo"
+                                class="input">
+                        </p>
+
+                        <p>
+                            <label for="email" class="label">E-mail</label>
+                            <input type="email" name="email" id="email" placeholder="exemplo@gmail.com" class="input">
+                        </p>
+
+                        <p>
+                            <label for="cpf" class="label">CPF</label>
+                            <input type="number" name="cpf" id="cpf" placeholder="000.000.000-00" class="input">
+                        </p>
+
+                        <p>
+                            <label for="telefone" class="label">Número de Telefone</label>
+                            <input type="number" name="telefone" id="telefone" placeholder="(00) 00000-0000"
+                                class="input">
+                        </p>
+                        <fieldset>
+                            <legend>Endereço</legend>
+                            <p>
+                                <label for="rua" class="label">Rua</label>
+                                <input type="text" name="rua" id="rua" placeholder="Rua" class="input">
+                            </p>
+
+                            <p>
+                                <label for="complemento" class="label">Complemento</label>
+                                <input type="text" name="complemento" placeholder="Complemento" class="input">
+                            </p>
+
+                            <p>
+                                <label for="cidade" class="label">Cidade</label>
+                                <input type="text" name="cidade" placeholder="Cidade" class="input">
+                            </p>
+
+                            <p>
+                                <label for="estado" class="label">Estado</label>
+                                <input type="text" name="estado" placeholder="Estado" class="input">
+                            </p>
+
+                            <p>
+                                <label for="cidade" class="label">CEP</label>
+                                <input type="number" name="cep" placeholder="CEP: Ex 00000-000" class="input">
+                            </p>
+
+                        </fieldset>
+
+                    <div class="btn">
+                        <button type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

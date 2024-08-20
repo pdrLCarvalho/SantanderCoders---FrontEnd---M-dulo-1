@@ -1,0 +1,1478 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+body {
+  margin: 0;
+  font-family: "SantanderText", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #f8071b;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #252525;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.logo {
+  margin: 0 20px;
+}
+
+/*--------------FONTES-----------------*/
+@font-face {
+  font-family: 'SantanderHeadline-Bold';
+  src: url('./assets/fonts/headlines/santanderheadline-bold-webfont.woff2') format('woff2'),
+    url('./assets/fonts/headlines/santanderheadline-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SantanderHeadline-BoldIt';
+  src: url('../fonts/santander-headline/santanderheadline-boldit-webfont.woff2') format('woff2'),
+    url('./assets/fonts/headlines/santanderheadline-boldit-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SantanderHeadline-It';
+  src: url('./assets/fonts/headlines/santanderheadline-it-webfont.woff2') format('woff2'),
+    url('./assets/fonts/headlines/santanderheadline-it-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SantanderHeadline';
+  src: url('./assets/fonts/headlines/santanderheadline-regular-webfont.woff2') format('woff2'),
+    url('./assets/fonts/headlines/santanderheadline-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SantanderText-Bold';
+  src: url('./assets/fonts/text/santandertext-bold-webfont.woff2') format('woff2'),
+    url('./assets/fonts/text/santandertext-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SantanderText-BoldItalic';
+  src: url('./assets/fonts/text/santandertext-bolditalic-webfont.woff2') format('woff2'),
+    url('./assets/fonts/text/santandertext-bolditalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SantanderText-Italic';
+  src: url('./assets/fonts/text/santandertext-italic-webfont.woff2') format('woff2'),
+    url('./assets/fonts/text/santandertext-italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SantanderText-Light';
+  src: url('./assets/fonts/text/santandertext-light-webfont.woff2') format('woff2'),
+    url('./assets/fonts/text/santandertext-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SantanderText-LightItalic';
+  src: url('./assets/fonts/text/santandertext-lightitalic-webfont.woff2') format('woff2'),
+    url('./assets/fonts/text/santandertext-lightitalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SantanderText';
+  src: url('./assets/fonts/text/santandertext-regular-webfont.woff2') format('woff2'),
+    url('./assets/fonts/text/santandertext-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* -------------- Header ----------- */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.2);
+  height: 50px;
+}
+
+.header .logo {
+  width: 120px;
+}
+
+.header nav ul{
+  display: none;
+}
+
+.menu-item-nav {
+  cursor: pointer;
+  display: flex;
+  color: inherit;
+  text-decoration: none;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav .nav a:hover {
+  color: #fff;
+}
+
+.background-black-navbar {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.menu-mobile {
+  display: flex;
+  background: #f8071b;
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px #000;
+}
+
+.mobile-menu-active {
+  display: flex !important;
+}
+
+#menu {
+  display: none;
+  position: absolute;
+
+  right: 10px;
+  top: 60px;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  color: #212529;
+  font-size: 16px;
+  min-width: 160px;
+  padding: 8px 0;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  gap: 0;
+}
+
+.sticky #menu {
+  top: 50px;
+}
+
+.menu-item-nav {
+  width: 100%;
+  padding: 4px 24px;
+  text-align: center;
+}
+
+.menu-item-nav:hover {
+  background-color: #ededed;
+}
+
+/* ------------  Main ------------- */
+main {
+  background: url(./assets/images/banner-hero-desktop.jpg) no-repeat center center;
+  width: 100%;
+  padding-top: 51px;
+  min-height: 768px;
+  display: flex;
+  background-size: cover;
+  justify-content: center;
+  position: relative;
+}
+
+.promo-container-1,
+.promo-container-2,
+.promo-container-3 {
+  display: none;
+}
+
+.mobile-section {
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.container-promocao {
+  flex-wrap: wrap;
+  padding: 15px 20px 0 20px;
+}
+
+.box-logo {
+  flex-direction: column;
+  align-items: center;
+}
+
+.box-logo .promocao-text-1 {
+  font-family: SantanderText;
+  font-size: 1.2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: italic;
+  line-height: 1.5rem;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.box-logo .promocao-text-2 {
+  font-family: SantanderHeadline-It;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -1px;
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  line-height: 35px;
+  text-transform: uppercase;
+}
+
+.mobile-section .cards-hero-img {
+  justify-content: center;
+}
+
+.mobile-section .cards-hero-img img {
+  width: 130px;
+}
+
+.descricao-promo-mic {
+  flex-wrap: wrap;
+  margin: 20px 0 0 0;
+}
+
+.descricao-promo-mic .mic-icon img {
+  width: 35px;
+}
+
+.descricao-promo-mic .texto-descritivo-header {
+  color: #fff;
+  font-family: SantanderText-Italic;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: 18px;
+  font-weight: 300;
+  font-stretch: normal;
+  line-height: 20px;
+  letter-spacing: -0.32px;
+  text-align: left;
+  margin-left: 16px;
+}
+
+.descricao-promo-mic .texto-descritivo-header span {
+  font-weight: bold;
+}
+
+.grupo-descricao {
+  flex-wrap: nowrap;
+}
+
+.totem-container-mobile .hearts-midia {
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 130px;
+}
+
+.totem-container-mobile .hearts-midia img {
+  max-width: 228px;
+}
+
+.heart {
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  background-image: url('./assets/images/heart-left.png');
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  z-index: 1;
+  transform: translateY(-120px) scale(1.5);
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(0.5);
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.cta-box-main {
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  z-index: 99;
+  margin: 0 0 30px 0;
+}
+
+/* ------------- */
+
+.bnt-cadastrar-conjunto {
+  bottom: 0;
+  position: absolute;
+  z-index: 8;
+}
+
+.wallpaper-hands {
+  background-image: url(./assets/images/hands.png);
+  width: 100%;
+  height: 260px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  background-position-x: center;
+  z-index: 2;
+}
+
+.vertical {
+  width: 6px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: rgb(248, 7, 27);
+  background-color: rgb(248, 7, 27);
+  animation-direction: alternate-reverse;
+  margin: 3px;
+}
+
+.equalizer {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.vertical-lines {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vertical {
+  width: 5px;
+  height: 20px;
+  background-color: #f8071b;
+}
+
+@keyframes equalizer {
+  from {
+    height: 100%;
+  }
+
+  to {
+    height: 20px;
+  }
+}
+
+/* ------------Fim main ------------- */
+
+/* ------------Seção Como Participar ------------- */
+.participar {
+  text-align: center;
+  padding: 60px 0 50px 0;
+}
+
+.participar h2 {
+  font-family: 'SantanderHeadline-Bold';
+  font-size: 26px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000;
+}
+
+.participar-icon {
+  background: url(assets/images/bg-item.svg) no-repeat center center;
+  height: 130px;
+  background-size: contain;
+}
+
+.participar-icon img {
+  border: 3px solid #fff;
+  border-radius: 15px;
+  padding: 30px 20px;
+  margin-top: 12px;
+}
+
+.como_participar h3 {
+  font-family: SantanderText;
+  font-size: 1.5rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2rem;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000;
+  margin: 20px 0 10px 0;
+}
+
+.como_participar a {
+  color: #000;
+}
+
+.como_participar .btn-cadastrar {
+  font-family: 'SantanderHeadline-Bold';
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15px;
+  border: 1px solid black;
+  letter-spacing: -2.24px;
+  border-radius: 6px;
+  padding: 10px 13px;
+  background: #fff;
+  display: inline-block;
+}
+
+.btn-cta {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  margin: 18px 5px 5px 5px;
+  gap: 20px;
+}
+
+.btn-cta .btn-link {
+  border: solid 1px #00000000;
+  border-radius: 40px;
+  background-color: #f8071b;
+  color: #fff;
+  padding: 8px 12px;
+  display: inline-block;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-cta .btn-link:hover {
+  color: #fff;
+}
+
+/* ------------------------------------------------- */
+
+/* ------------ Seção Tenha mais chances ------------- */
+.chances h2 {
+  font-family: 'SantanderHeadline-Bold';
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+}
+
+.tenha_mais_chances {
+  background: url(assets/images/banner-chance.jpg) no-repeat center center;
+  background-size: cover;
+  padding: 60px 0 50px 0;
+}
+
+.chances .col-md-4 {
+  padding: 0 12.5px;
+}
+
+.chance-box {
+  background: url(assets/images/bg-item-1.svg) no-repeat center center;
+  height: 290px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 290px;
+  background-size: contain;
+}
+
+.chance-box img {
+  text-align: center;
+}
+
+.chance-box p .title-item {
+  font-family: 'SantanderHeadline-Bold';
+  margin: 0 auto 0 auto;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+  color: #000;
+  display: block;
+}
+
+.chance-box p {
+  width: 246px;
+  display: block;
+  margin: 26px auto 0 auto;
+  font-family: SantanderText;
+  font-size: 20px;
+  line-height: 1.1;
+  text-align: center;
+  color: #3a3a3a;
+}
+
+.chance-box .cta-hero {
+  margin-top: 30px;
+}
+
+.chance-box .title-cta {
+  color: #fff;
+  text-decoration: none;
+}
+
+.cta-hero .title-cta span {
+  padding: 2px 13px 4px;
+  border-radius: 6px;
+  border: solid 1px #fff;
+}
+
+.cta-hero.cta-white .title-cta {
+  font-family: 'SantanderHeadline-Bold';
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: -2.24;
+  text-align: center;
+  color: #fff;
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+
+.tenha_mais_chances .btn-link {
+  width: 200px;
+  height: 40px;
+  border: solid 1px #000;
+  border-radius: 40px;
+  background-color: #f8071b;
+  color: #fff;
+  padding: 8px 0 7px 0;
+  display: inline-block;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+/* -------------------------------------------------- */
+
+/* ------------Seção Premios ------------- */
+.premios {
+  padding: 60px 0 0 0;
+}
+
+.conteudo-premios {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.premios h2 {
+  font-family: 'SantanderHeadline-Bold';
+  font-size: 26px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000;
+}
+
+.premios .conteudo-premios h3 {
+  font-family: SantanterText;
+  font-size: 20px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000;
+  display: block;
+}
+
+.premios .conteudo-premios h3 span {
+  font-family: 'SantanderHeadline-Bold';
+}
+
+.texto-explicativo {
+  font-family: 'SantanderText-italic';
+  margin: 20px 0 20px 0;
+  font-size: 1.1rem;
+  color: #000;
+}
+
+.premios .texto-explicativo a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.premios .btn-cadastrar {
+  font-family: 'SantanderHeadline-Bold';
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15px;
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 10px 13px;
+  background: #fff;
+  display: inline-block;
+}
+
+.premios .btn-link {
+  width: 200px;
+  height: 40px;
+  border: solid 1px #000;
+  border-radius: 40px;
+  background-color: #f8071b;
+  color: #fff;
+  padding: 8px 0 7px 0;
+  display: inline-block;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.premios .mb-60 {
+  margin-bottom: 60px;
+}
+
+/* -------------------------------------------------- */
+
+/* ------------Seção Shows ------------- */
+.shows {
+  background: #f2f2f2;
+  padding: 50px 0 70px;
+  box-sizing: border-box;
+}
+
+.shows .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.shows h2 {
+  font-family: 'SantanderHeadLine-Bold';
+  font-size: 36px;
+  font-weight: bold;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000;
+}
+
+.shows .container .nav-tabs {
+  padding: 0 15px;
+  border-bottom: 3px solid #f8071b;
+  margin-top: 30px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.shows .nav-tabs .nav-item {
+  flex: none;
+  margin-bottom: 0;
+}
+
+.shows .nav-item:first-child .nav-link {
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #f8071b;
+  background: #f8071b;
+  color: #fff;
+}
+
+.shows .nav-link.active {
+  background: #f8071b;
+  font-family: 'SantanderHeadLine-Bold';
+  font-size: 24px;
+  text-transform: uppercase;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fff;
+}
+
+.shows .nav-link {
+  padding: 14px 65px;
+  background-color: #fff;
+  font-family: 'SantanderHeadline-Bold';
+  font-size: 24px;
+  text-transform: uppercase;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000;
+}
+
+.shows .nav-item:last-child .nav-link {
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #f8071b;
+}
+
+.shows .tab-content .tab-pane {
+  padding: 20px 0;
+  margin-top: 0;
+}
+
+.shows .conteudo-tab {
+  background: transparent;
+  margin: 0;
+}
+
+.shows .conteudo-tab h3 {
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  text-align: center;
+  color: #000000;
+  font-family: 'SantanderText';
+  margin-bottom: 10px;
+}
+
+.shows .conteudo-slide-tab {
+  flex: none;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.shows .posters {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: grab;
+  width: 320px;
+  max-height: 450px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  perspective: 1200px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  z-index: 1;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.shows .picture {
+  width: 320px;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+}
+
+.shows .detail {
+  padding: 10px 0px 13px;
+  text-align: center;
+  border-top: 5px solid #f8071b;
+  min-height: 130px;
+  width: 320px;
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+}
+
+.shows .detail h4 {
+  font-size: 1.625rem;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.625rem;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+  font-family: 'SantanderText-Bold';
+  display: block;
+}
+
+.shows .detail .calendar-event {
+  text-align: center;
+  font-family: 'SantanterText';
+  font-size: 15px;
+  line-height: 15px;
+  color: #000;
+  display: block;
+}
+
+.shows .posters .detail i {
+  color: #f8071b;
+}
+
+.shows .detail .flag-footer {
+  position: fixed;
+  bottom: 12px;
+  width: 100%;
+  box-sizing: 100%;
+  display: block;
+}
+
+.shows .detail .flag-footer p {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+header .btn-cta {
+  margin: 2.5px 5px;
+}
+
+.sticky {
+  background: rgba(0, 0, 0, 0.9);
+  margin: 0px;
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  border-bottom: 1px solid;
+  border-color: rgba(0, 0, 0, 1);
+  height: 50px !important;
+}
+
+.shows .detail .flag-footer p span {
+  font-family: 'SantanterText-Bold';
+  font-size: 11px;
+  line-height: 11px;
+  border-radius: 4px;
+  border: 1px solid #f8071b;
+  padding: 2px 6px;
+  color: #f8071b;
+}
+
+/* -------------------------------------------------- */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+  /* seção header */
+
+  .header {
+    width: 100%;
+  }
+
+  .header .logo {
+    width: 143px;
+    margin-top: 22px;
+    margin-bottom: 23px;
+    margin-left: 20px;
+  }
+
+  .header nav ul{
+    display: block;
+  }
+
+  .background-black-navbar {
+    background-color: rgba(0, 0, 0, 1);
+  }
+
+  /* fim do header  */
+
+  /* -------------------- seção main --------------------------- */
+
+  .promo-container-1,
+  .promo-container-2,
+  .promo-container-3 {
+    display: none;
+  }
+
+  .box-logo .promocao-text-1 {
+    font-size: 1.8rem;
+  }
+
+  .box-logo .promocao-text-2 {
+    font-size: 1.4rem;
+  }
+
+  .descricao-promo-mic .texto-descritivo-header {
+    font-size: 1.2rem;
+  }
+
+  .descricao-promo-mic .grupo-descricao {
+    justify-content: center;
+  }
+
+  .descricao-promo-mic .mic-icon img {
+    width: 50px;
+  }
+
+  .totem-container-mobile .hearts-midia img {
+    max-width: 428px;
+  }
+
+  .heart {
+    transform: translateY(-200px) scale(1.5);
+  }
+
+  /* ------------Seção Como Participar ------------- */
+  .participar {
+    padding: 30px 0;
+  }
+
+  .como_participar h3 {
+    font-size: 2rem;
+  }
+
+  .menu-mobile {
+    display: flex;
+  }
+
+  #menu {
+    display: none;
+    position: absolute;
+
+    right: 10px;
+    top: 60px;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    color: #212529;
+    font-size: 16px;
+    min-width: 160px;
+    padding: 8px 0;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    gap: 0;
+  }
+
+  .sticky #menu {
+    top: 50px;
+  }
+
+  .menu-item-nav {
+    width: 100%;
+    padding: 4px 24px;
+    text-align: center;
+  }
+
+  .menu-item-nav:hover {
+    background-color: #ededed;
+  }
+
+  .como_participar .btn-link {
+    width: 200px;
+    height: 40px;
+    border: solid 1px #000;
+    border-radius: 40px;
+    background-color: #f8071b;
+    color: #fff;
+    padding: 8px 0 7px 0;
+    display: inline-block;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 20px;
+    text-decoration: none;
+  }
+
+  /* -------------------------------------- */
+
+  /*------------- Seção Tenha Mais Chances------------- */
+  .chance-box {
+    height: 250px;
+    width: 250px;
+  }
+
+  .chance-box p .title-item {
+    font-family: 'SantanderHeadline-Bold';
+    margin: 26 auto 0 auto;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 24px;
+    text-align: center;
+    color: #000;
+    display: block;
+  }
+
+  .chance-box p {
+    width: 230px;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .cta-hero.cta-white .title-cta {
+    font-family: 'SantanderHeadline-Bold';
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 32px;
+    letter-spacing: -2.24;
+    text-align: center;
+    color: #fff;
+    margin-top: 15px;
+    margin-bottom: 35px;
+  }
+
+  /*-------------------------------------------- */
+
+  /*------------- Seção Premios------------- */
+
+  .premios h2 {
+    font-size: 36px;
+  }
+
+  .texto-explicativo {
+    font-size: 2.25rem;
+  }
+
+  /*-------------------------------------- */
+
+  /* ------------Seção Shows ------------- */
+
+  .shows .container .nav-tabs {
+    padding: 0 15px;
+    border-bottom: 3px solid #f8071b;
+    margin-top: 30px;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .shows .nav-item:first-child .nav-link {
+    border-radius: 10px 0 0 0;
+    border: 1px solid #f8071b;
+    background: #f8071b;
+    color: #fff;
+    margin-bottom: 0;
+  }
+
+  .shows .nav-item:last-child .nav-link {
+    border-radius: 0 10px 0 0;
+    border: none;
+    margin-bottom: 0px;
+  }
+
+  /*-------------------------------------- */
+}
+
+@media (min-width: 1025px) {
+
+  /* seção header */
+
+  .header {
+    background-color: #00000000;
+    width: 100%;
+    border-bottom: 1px solid;
+    border-color: rgba(255, 255, 255, 0.4);
+    min-height: 70px;
+  }
+
+  .header .logo {
+    width: 143px;
+    margin-top: 22px;
+    margin-bottom: 23px;
+    margin-left: 20px;
+  }
+
+  .menu-mobile{
+    display: none;
+  }
+
+  .header nav ul{
+    display: flex;
+  }
+
+  .background-black-navbar {
+    background-color: rgba(0, 0, 0, 1);
+  }
+
+  #menu {
+    display: flex;
+    position:static;
+    padding: 4px 24px;;
+    right: 10px;
+    top: 60px;
+    flex-direction: row;
+    background-color: #f2f2f200;
+    color: #fff;
+    border: none;
+    gap: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .menu-item-nav {
+    align-items: center;
+    border-top: solid 3px transparent;
+    height: 70px;
+  }
+
+  .menu-item-nav:hover {
+    border-top: solid 3px red;
+    background-color: #00000000;
+  }
+
+  /* fim do header  */
+
+  /* ----------- seção main ------------ */
+
+  main {
+    background: url(./assets/images/banner-hero-desktop.jpg) no-repeat center center;
+    width: 100%;
+    min-height: 768px;
+    padding-top: 100px;
+    display: flex;
+    background-size: cover;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .promo-container-1,
+  .promo-container-2,
+  .promo-container-3 {
+    display: block;
+  }
+
+  .mobile-section {
+    display: none;
+  }
+
+  .promo-container-1 {
+    padding-left: 200px;
+    padding-top: 20px;
+  }
+
+  .promo-container-1 .cards-hero-img img {
+    width: 251px;
+  }
+
+  .promo-container-1 .cards-santander img {
+    width: 242px;
+  }
+
+  .promo-container-1 .promocao-text-1 {
+    font-family: SantanderText;
+    font-size: 1.3rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: italic;
+    line-height: 1.875rem;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  .promo-container-1 .promocao-text-2 {
+    font-family: SantanderHeadline-It;
+    font-size: 3.75rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 4.75rem;
+    letter-spacing: -2.88px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  .promo-container-2 {
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .promo-container-2 .totem-music {
+    display: flex;
+    justify-content: center;
+    position: relative
+  }
+
+  .promo-container-3 {
+    display: flex;
+    width: 100%;
+    gap: 12px;
+    padding-right: 100px;
+    padding-left: 0;
+    padding-top: 20px;
+    padding-right: 100px;
+  }
+
+  .promo-container-3 .texto-descritivo-bold{
+    font-size: 2.2rem;
+    font-family: SantanderText-Italic;
+    font-weight: bold;
+    line-height: 30px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: -0.32px;
+    text-align: left;
+  }
+
+  .promo-container-3 .texto-descritivo-desktop .texto-descritivo-normal {
+    font-family: SantanderText-Italic;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 1.8rem;
+    line-height: 25px;
+    text-align: left;
+    color: #fff;
+    letter-spacing: -0.32px;
+  }
+
+  .promo-container-3 .mic-icon img {
+    width: 50px;
+  }
+
+  .bnt-cadastrar-conjunto {
+    bottom: 0;
+    position: absolute;
+    z-index: 8;
+    padding-bottom: 20px;
+  }
+
+  .wallpaper-hands {
+    background-image: url(./assets/images/hands.png);
+    width: 100%;
+    height: 260px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .vertical {
+    width: 6px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: rgb(248, 7, 27);
+    background-color: rgb(248, 7, 27);
+    animation-direction: alternate-reverse;
+    margin: 3px;
+    display: flex;
+  }
+
+  .equalizer {
+    display: flex;
+    width: 100%;
+    padding: 20px 40px;
+  }
+
+  .vertical-lines {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  /*--------------------- Seção Participar----------------------- */
+  .participar {
+    text-align: center;
+    padding: 60px 0 50px 0;
+  }
+
+  .partipar h2 {
+    font-size: 36px;
+  }
+
+  .participar-icon {
+    height: 150px;
+  }
+
+  .participar-icon img {
+    padding: 40px 30px;
+  }
+
+  .como_participar .btn-cadastrar {
+    font-size: 32px;
+    margin-top: 77px;
+  }
+
+  .como_participar .btn-link {
+    width: 200px;
+    height: 40px;
+    border: solid 1px #000;
+    border-radius: 40px;
+    background-color: #f8071b;
+    color: #fff;
+    padding: 8px 0 7px 0;
+    display: inline-block;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 20px;
+    text-decoration: none;
+  }
+
+  /*-------------------------------------------- */
+
+  /*------------- Seção Tenha Mais Chances------------- */
+  .chances h2 {
+    font-size: 36px;
+  }
+
+  .chance-box {
+    height: 340px;
+    width: 100%;
+  }
+
+  .chance-box p .title-item {
+    font-family: 'SantanderHeadline-Bold';
+    margin: 26 auto 0 auto;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 24px;
+    text-align: center;
+    color: #000;
+    display: block;
+  }
+
+  .cta-hero.cta-white .title-cta {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 35px;
+  }
+
+  /*-------------------------------------- */
+
+  /*------------- Seção Premios------------- */
+  .premios h2 {
+    font-size: 36px;
+  }
+
+  .conteudo-premios {
+    margin-top: 58px;
+  }
+
+  .premios .conteudo-premios h3 {
+    font-size: 36px;
+  }
+
+  .texto-explicativo {
+    font-size: 2.25rem;
+  }
+
+  .premios .btn-cadastrar {
+    font-size: 32px;
+    margin-top: 77px;
+  }
+
+  .nav {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.8rem;
+    margin-right: 20px;
+  }
+
+  /*----------------------------------------- */
+
+  /* ------------Seção Shows ------------- */
+
+  .shows .container .nav-tabs {
+    padding: 0 15px;
+    border-bottom: 3px solid #f8071b;
+    margin-top: 30px;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .shows .nav-item:first-child .nav-link {
+    border-radius: 10px 0 0 10px;
+    margin-bottom: 10px;
+    border: 1px solid #f8071b;
+    background: #f8071b;
+    color: #fff;
+  }
+
+  .shows .nav-item:first-child .nav-link {
+    border-radius: 10px 0 0 0;
+    border: 1px solid #f8071b;
+    background: #f8071b;
+    color: #fff;
+    margin-bottom: 0;
+  }
+
+  .shows .nav-item:last-child .nav-link {
+    border-radius: 0 10px 0 0;
+    border: none;
+    margin-bottom: 0px;
+  }
+
+  /*-------------------------------------- */
+}
+
+/* FOOTER */
+.footer {
+  background: #f8071b;
+  padding: 30px 10px 0;
+  font-size: 15px;
+}
+
+.footer-links a {
+  opacity: 0.8;
+  font-family: SantanderText;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 3;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+  text-decoration: underline;
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.footer .footerInfo p {
+  opacity: 0.8;
+  font-family: SantanderText;
+  font-size: 10px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1rem;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+  text-decoration: underline;
+  margin: 38px 0 30px 0;
+}
+
+.accordion-header {
+  background-color: transparent !important;
+}
